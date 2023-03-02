@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Container,
   Flex,
   Heading,
   Image,
@@ -43,6 +44,7 @@ const DiceHome = () => {
     <>
       {gameStarted ? (
         <>
+        <Container maxW='container.xl' py={10}></Container>
           <Stack
             justify="center"
             align="center"
