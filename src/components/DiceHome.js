@@ -102,7 +102,7 @@ const DiceHome = () => {
                   <Image src={require(`../images/dice${dice}.png`)} />
                 </Box>
               </SimpleGrid>
-              <Text fontSize="lg">Click on dice to roll</Text>
+              <Text fontSize="lg" mt={{base:'60px', sm:'60px', md:'auto', lg:'auto'}}>Click on dice to roll</Text>
               <Text fontSize="6xl" color={score > 0 ? "green" : "red"}>
                 {score}
               </Text>
