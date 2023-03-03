@@ -8,7 +8,7 @@ const CartPage = () => {
     <>
       <Container maxW="container.xl" py={20}>
         <Box textAlign={{base:'center', md:'left'}} w='full' mt={4}>
-        <Heading fontSize='xl'>This is Your Cart Page</Heading>
+        <Heading fontSize='3xl'>This is Your Cart Page</Heading>
         <Text>
           In publishing and graphic design, Lorem ipsum is a placeholder text
           commonly used to demonstrate the visual form of a document or a

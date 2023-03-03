@@ -44,6 +44,7 @@ const DiceHome = () => {
     <>
       {gameStarted ? (
         <>
+        <Container maxW='container.xl' py={20} >
           <Stack
             justify="center"
             align="center"
@@ -117,6 +118,7 @@ const DiceHome = () => {
               </ListItem>
             </List>
           </Stack>
+          </Container>
         </>
       ) : (
         <Container maxW='container.xl' py={20} >

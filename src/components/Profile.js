@@ -1,7 +1,7 @@
-import userProfileImage from '../images/sunder.jpg';
-import workImage1 from '../images/work-1.png';
-import workImage2 from '../images/work-2.png';
-import workImage3  from '../images/work-3.png';
+import userProfileImage from "../images/sunder.jpg";
+import workImage1 from "../images/work-1.png";
+import workImage2 from "../images/work-2.png";
+import workImage3 from "../images/work-3.png";
 import { PhoneIcon } from "@chakra-ui/icons";
 import {
   Button,
@@ -17,6 +17,11 @@ import {
   InputLeftElement,
   Stack,
   Text,
+  List,
+  ListItem,
+  ListIcon,
+  OrderedList,
+  UnorderedList,
 } from "@chakra-ui/react";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
@@ -36,8 +41,8 @@ const Profile = () => {
           gap={10}
         >
           <GridItem w="100%">
-            <Text fontSize="xl" color="green">
-              Full Stack Developer / Fronted end developer(UI)
+            <Text fontSize="1xl" color="green">
+              Full Stack Developer
             </Text>
             <Heading as="h2" color="orange.700">
               Hi, I'm Sunder Samota From India
@@ -47,10 +52,11 @@ const Profile = () => {
           <GridItem w="100%">
             <Heading>About Me</Heading>
             <Text>
-              In publishing and graphic design, Lorem ipsum is a placeholder
-              text commonly used to demonstrate the visual form of a document or
-              a typeface without relying on meaningful content. Lorem ipsum may
-              be used as a placeholder before final copy is available.
+              A full stack developer is a web developer or engineer who works
+              with both the front and back ends of a website or application. In
+              this sense, they provide an end-to-end service, and can be
+              involved in projects that involve databases and building
+              user-facing websites
             </Text>
             <Tabs>
               <TabList>
@@ -60,21 +66,34 @@ const Profile = () => {
               </TabList>
               <TabPanels>
                 <TabPanel>
-                  <Text>UI/UX</Text>
-                  <Text>Designing Web/App Interface</Text>
-                  <Text>HTML</Text>
-                  <Text>Designing Web/App Interface</Text>
-                  <Text>Designing Web/App Interface</Text>
-                  <Text>Designing Web/App Interface</Text>
-                  <Text>Designing Web/App Interface</Text>
+                  <UnorderedList>
+                    <ListItem>Front-end Languages and Frameworks</ListItem>
+                    <ListItem>Backend Technologies and Frameworks</ListItem>
+                    <ListItem>Database Management Systems</ListItem>
+                    <ListItem>Web Hosting Platforms</ListItem>
+                  </UnorderedList>
                 </TabPanel>
                 <TabPanel>
-                  <Text>Web Development</Text>
-                  <Text>Web App Development</Text>
+                  <UnorderedList>
+                    <ListItem>
+                      Learn the Necessary Programming Languages
+                    </ListItem>
+                    <ListItem>5 years experience in web technologies</ListItem>
+                    <ListItem>D2doctors pvt. ltd.</ListItem>
+                    <ListItem>Sraswatii global pvt,ltd.</ListItem>
+                    <ListItem>M.D. TRADELINE. USA. LLC.</ListItem>
+                  </UnorderedList>
                 </TabPanel>
                 <TabPanel>
-                  <Text>App Development!</Text>
-                  <Text>Building Androied/Ios Apps</Text>
+                  <UnorderedList>
+                    <ListItem>
+                      12th form Rajasthan education board, Ajmer
+                    </ListItem>
+                    <ListItem>BCA - Rajasthan university</ListItem>
+                    <ListItem>
+                      MCA - Rajasthan Technical university, Kota
+                    </ListItem>
+                  </UnorderedList>
                 </TabPanel>
               </TabPanels>
             </Tabs>
@@ -128,11 +147,7 @@ const Profile = () => {
           <Heading>My Work</Heading>
           <Flex justify="space-between" align="center">
             <HStack spacing={10}>
-              <Card
-                bgImage={workImage1}
-                color="white"
-                borderRadius="lg"
-              >
+              <Card bgImage={workImage1} color="white" borderRadius="lg">
                 <CardBody>
                   <Heading>Web Design</Heading>
                   <Text py={4}>
@@ -142,11 +157,7 @@ const Profile = () => {
                   </Text>
                 </CardBody>
               </Card>
-              <Card
-                bgImage={workImage2}
-                color="white"
-                borderRadius="lg"
-              >
+              <Card bgImage={workImage2} color="white" borderRadius="lg">
                 <CardBody>
                   <Heading>Web Design</Heading>
                   <Text py={4}>
@@ -156,11 +167,7 @@ const Profile = () => {
                   </Text>
                 </CardBody>
               </Card>
-              <Card
-                bgImage={workImage3}
-                color="white"
-                borderRadius="lg"
-              >
+              <Card bgImage={workImage3} color="white" borderRadius="lg">
                 <CardBody>
                   <Heading>Web Design</Heading>
                   <Text py={4}>
@@ -178,45 +185,46 @@ const Profile = () => {
             Learn More..
           </Button>
         </Stack>
-          <Grid templateColumns={{
+        <Grid
+          templateColumns={{
             base: "repeat(1, 1fr)",
             sm: "repeat(1, 1fr)",
             md: "repeat(2, 1fr)",
             lg: "repeat(2, 1fr)",
           }}
           py={20}
-          >
-            <GridItem>
-              <Heading>Contact Me</Heading>
-              <Text>sundersamota001@gmail.com</Text>
-              <Text>91-9694753020</Text>
-              <Text>70/57, Patel marg, Mansrover, Jaipur</Text>
-              <Button colorScheme="orange">Download CV</Button>
-            </GridItem>
-            <GridItem>
-              <InputGroup>
-                <InputLeftElement
-                  pointerEvents="none"
-                  children={<PhoneIcon color="gray.300" />}
-                />
-                <Input type="tel" placeholder="Phone number" />
-              </InputGroup>
-              <InputGroup>
-                <InputLeftElement
-                  pointerEvents="none"
-                  children={<PhoneIcon color="gray.300" />}
-                />
-                <Input type="tel" placeholder="Phone number" />
-              </InputGroup>
-              <InputGroup>
-                <InputLeftElement
-                  pointerEvents="none"
-                  children={<PhoneIcon color="gray.300" />}
-                />
-                <Input type="tel" placeholder="Phone number" />
-              </InputGroup>
-            </GridItem>
-          </Grid>
+        >
+          <GridItem>
+            <Heading>Contact Me</Heading>
+            <Text>sundersamota001@gmail.com</Text>
+            <Text>91-9694753020</Text>
+            <Text>70/57, Patel marg, Mansrover, Jaipur</Text>
+            <Button colorScheme="orange">Download CV</Button>
+          </GridItem>
+          <GridItem>
+            <InputGroup>
+              <InputLeftElement
+                pointerEvents="none"
+                children={<PhoneIcon color="gray.300" />}
+              />
+              <Input type="tel" placeholder="Phone number" />
+            </InputGroup>
+            <InputGroup>
+              <InputLeftElement
+                pointerEvents="none"
+                children={<PhoneIcon color="gray.300" />}
+              />
+              <Input type="tel" placeholder="Phone number" />
+            </InputGroup>
+            <InputGroup>
+              <InputLeftElement
+                pointerEvents="none"
+                children={<PhoneIcon color="gray.300" />}
+              />
+              <Input type="tel" placeholder="Phone number" />
+            </InputGroup>
+          </GridItem>
+        </Grid>
       </Container>
     </>
   );
