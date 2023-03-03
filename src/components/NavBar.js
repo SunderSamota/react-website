@@ -26,8 +26,6 @@ import Logo  from '../images/btc.svg';
 import ProfileImage  from '../images/sunder.jpg';
 
 const NavBar = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = React.useRef();
   return (
     <>
       <Flex
@@ -52,14 +50,6 @@ const NavBar = () => {
             <Text _hover={{color:'red'}}>Blog</Text>
           </Link>
         </Flex>
-        <IconButton
-          variant="ghost"
-          fontSize="3xl"
-          ref={btnRef}
-          onClick={onOpen}
-        >
-          <FaBars />
-        </IconButton>
         <Menu>
           <MenuButton>
             <Avatar src={ProfileImage} />

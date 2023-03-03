@@ -123,7 +123,7 @@ const DiceHome = () => {
         <Flex justify="center" align="center">
           <Image src={diceImage} w="50%" />
           <Stack>
-            <Heading fontSize="6xl">The Dice Game</Heading>
+            <Heading fontSize={{base:'3xl', sm:'3xl', md:'6xl', lg:'6xl'}}>The Dice Game</Heading>
             <Button
               bg="black"
               alignSelf="flex-end"
