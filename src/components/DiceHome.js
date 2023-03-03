@@ -46,6 +46,17 @@ const DiceHome = () => {
       {gameStarted ? (
         <>
           <Container maxW="container.xl" py={10}>
+          <Button
+                onClick={() => {
+                  setGameStarted(false);
+                }}
+                alignSelf="flex-end"
+                bg="black"
+                color="white"
+                _hover={{ bg: "gray" }}
+              >
+                Back Game
+              </Button>
             <Stack
               justify="center"
               align="center"
@@ -60,17 +71,6 @@ const DiceHome = () => {
               >
                 {error ? error : "Select Number"}
               </Heading>
-              <Button
-                onClick={() => {
-                  setGameStarted(false);
-                }}
-                alignSelf="flex-end"
-                bg="black"
-                color="white"
-                _hover={{ bg: "gray" }}
-              >
-                Back Game
-              </Button>
               <Flex>
                 {numbers.map((value) => (
                   <Flex
@@ -106,7 +106,7 @@ const DiceHome = () => {
               <Text fontSize="6xl" color={score > 0 ? "green" : "red"}>
                 {score}
               </Text>
-              <Heading as="h2" fontSize={{base:'4xl', sm:'4xl', md:'6xl', ld:'6xl'}}>
+              <Heading as="h2" fontSize={{base:'4xl', sm:'4xl', md:'6xl', lg:'6xl'}}>
                 Total Score
               </Heading>
               <Button onClick={() => setScore(0)}>Reset Score</Button>
