@@ -9,7 +9,7 @@ import {
   ListItem,
   Stack,
   Text,
-  SimpleGrid 
+  SimpleGrid,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import diceImage from "../images/dices.png";
@@ -78,12 +78,12 @@ const DiceHome = () => {
                     align="center"
                     bg={selectedNumbers === value ? "green" : "black"}
                     color="white"
-                    w={{base:'35px', sm:'35px', md:'50px', lg:'50px'}}
-                    h={{base:'35px', sm:'35px', md:'50px', lg:'50px'}}
+                    w={{ base: "35px", sm: "35px", md: "50px", lg: "50px" }}
+                    h={{ base: "35px", sm: "35px", md: "50px", lg: "50px" }}
                     key={value}
                     mr={4}
                     borderRadius={5}
-                    fontSize={{base:'xl', sm:'xl', md:'2xl', lg:'2xl'}}
+                    fontSize={{ base: "xl", sm: "xl", md: "2xl", lg: "2xl" }}
                     cursor="pointer"
                     onClick={() => onNumberClicked(value)}
                   >
@@ -93,14 +93,14 @@ const DiceHome = () => {
                 ;
               </Flex>
               <SimpleGrid columns={1}>
-              <Box
-                h={{ base: "35px", sm: "35px", md: "150px", lg: "150px" }}
-                w={{ base: "100px", sm: "100px", md: "150px", lg: "150px" }}
-                onClick={genrateRandomNum}
-                cursor="pointer"
-              >
-                <Image src={require(`../images/dice${dice}.png`)} />
-              </Box>
+                <Box
+                  h="150px"
+                  w="150px"
+                  onClick={genrateRandomNum}
+                  cursor="pointer"
+                >
+                  <Image src={require(`../images/dice${dice}.png`)} />
+                </Box>
               </SimpleGrid>
               <Text fontSize="lg">Click on dice to roll</Text>
               <Text fontSize="6xl" color={score > 0 ? "green" : "red"}>

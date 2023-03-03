@@ -6,7 +6,7 @@ import { Box, Container, Divider, Flex, Heading, Text } from "@chakra-ui/react";
 const CartPage = () => {
   return (
     <>
-      <Container maxW="container.xl" py={20}>
+      <Container maxW="container.xl" py={10}>
         <Box textAlign={{base:'center', md:'left'}} w='full' mt={4}>
         <Heading fontSize='3xl'>This is Your Cart Page</Heading>
         <Text>
