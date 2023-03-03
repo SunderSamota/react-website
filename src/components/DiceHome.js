@@ -54,7 +54,7 @@ const DiceHome = () => {
             >
               <Heading
                 as="h1"
-                fontSize={{ base: "2xl", sm: "2xl", md: "6xl", lg: "6xl" }}
+                fontSize={{ base: "4xl", sm: "4xl", md: "6xl", lg: "6xl" }}
                 color={error ? "red" : "black"}
               >
                 {error ? error : "Select Number"}
@@ -92,15 +92,13 @@ const DiceHome = () => {
                 ;
               </Flex>
               <Box
-                h={{ base: "50px", sm: "50px", md: "150px", lg: "150px" }}
+                h={{ base: "35px", sm: "35px", md: "150px", lg: "150px" }}
                 w={{ base: "100px", sm: "100px", md: "150px", lg: "150px" }}
                 onClick={genrateRandomNum}
                 cursor="pointer"
               >
                 <Image
-                  w={{ base: "150px", sm: "150px", md: "150px", lg: "150px" }}
-                  h={{ base: "150px", sm: "150px", md: "150px", lg: "150px" }}
-                  p={4}
+                  pt={4}
                   src={require(`../images/dice${dice}.png`)}
                 />
               </Box>
