@@ -17,10 +17,7 @@ import {
   InputLeftElement,
   Stack,
   Text,
-  List,
   ListItem,
-  ListIcon,
-  OrderedList,
   UnorderedList,
 } from "@chakra-ui/react";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";

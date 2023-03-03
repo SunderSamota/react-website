@@ -1,26 +1,14 @@
 import {
   Avatar,
-  Button,
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
   Flex,
-  IconButton,
   Image,
-  Input,
   Menu,
   MenuButton,
   MenuItem,
   MenuList,
   Text,
-  useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
-import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Logo  from '../images/btc.svg';
 import ProfileImage  from '../images/sunder.jpg';

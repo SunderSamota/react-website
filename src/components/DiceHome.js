@@ -51,10 +51,10 @@ const DiceHome = () => {
               onClick={() => {
                 setGameStarted(false);
               }}
-              alignSelf="flex-flex-start"
-              bg="black"
-              color="white"
-              _hover={{ bg: "gray" }}
+              alignSelf="flex-start"
+              color="black"
+              cursor="pointer"
+              _hover={{ color: "red" }}
             >
               <ArrowBackIcon /> Back Game
             </Text>
@@ -63,7 +63,7 @@ const DiceHome = () => {
               align="center"
               maxW="1300px"
               mx="auto"
-              gap={0}
+              gap={4}
             >
               <Heading
                 as="h1"
