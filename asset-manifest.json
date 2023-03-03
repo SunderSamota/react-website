@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-website/static/css/main.073c9b0a.css",
-    "main.js": "/react-website/static/js/main.a8d04dde.js",
+    "main.js": "/react-website/static/js/main.6a932cac.js",
     "static/js/787.f3d7924f.chunk.js": "/react-website/static/js/787.f3d7924f.chunk.js",
     "static/media/pic3.webp": "/react-website/static/media/pic3.2944513af8bd1363f78a.webp",
     "static/media/work-1.png": "/react-website/static/media/work-1.9d70c2239b9cefe78a18.png",
@@ -12,6 +12,7 @@
     "static/media/pic1.webp": "/react-website/static/media/pic1.bf844bffadbc38ad21d5.webp",
     "static/media/dices.png": "/react-website/static/media/dices.a7ba644e0fee22bc4de6.png",
     "static/media/card.jpg": "/react-website/static/media/card.b22f3fda6be50b9d2d8a.jpg",
+    "static/media/Resume-2023.docx": "/react-website/static/media/Resume-2023.c3580a07463119380790.docx",
     "static/media/btc.svg": "/react-website/static/media/btc.23440b9e7150dd21e525d59dbe46a6f9.svg",
     "static/media/avatar.png": "/react-website/static/media/avatar.fbfc7d24eb2fd89f9b2a.png",
     "static/media/penny-board.jpg": "/react-website/static/media/penny-board.c7e524e706518b596c79.jpg",
@@ -19,11 +20,11 @@
     "static/media/dice5.png": "/react-website/static/media/dice5.426cf572dc2aceed2db1.png",
     "index.html": "/react-website/index.html",
     "main.073c9b0a.css.map": "/react-website/static/css/main.073c9b0a.css.map",
-    "main.a8d04dde.js.map": "/react-website/static/js/main.a8d04dde.js.map",
+    "main.6a932cac.js.map": "/react-website/static/js/main.6a932cac.js.map",
     "787.f3d7924f.chunk.js.map": "/react-website/static/js/787.f3d7924f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.a8d04dde.js"
+    "static/js/main.6a932cac.js"
   ]
 }
