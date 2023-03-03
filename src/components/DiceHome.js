@@ -11,7 +11,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import diceImage  from '../images/dices.png';
+import diceImage from "../images/dices.png";
 
 const DiceHome = () => {
   const [gameStarted, setGameStarted] = useState(false);
@@ -44,101 +44,109 @@ const DiceHome = () => {
     <>
       {gameStarted ? (
         <>
-        <Container maxW='container.xl' py={20} >
-          <Stack
-            justify="center"
-            align="center"
-            maxW="1300px"
-            mx="auto"
-            gap={0}
-          >
-            <Heading as="h1" fontSize="6xl" color={error ? "red" : "black"}>
-              {error ? error : "Select Number"}
-            </Heading>
-            <Button
-              onClick={() => {
-                setGameStarted(false);
-              }}
-              alignSelf="flex-end"
-              bg='black'
-              color='white'
-              _hover={{bg:'gray'}}
+          <Container maxW="container.xl" py={10}>
+            <Stack
+              justify="center"
+              align="center"
+              maxW="1300px"
+              mx="auto"
+              gap={0}
             >
-              Back Game
-            </Button>
-            <Flex>
-              {numbers.map((value) => (
-                <Flex
-                  justify="center"
-                  align="center"
-                  bg={selectedNumbers === value ? "green" : "black"}
-                  color="white"
-                  w="50px"
-                  h="50px"
-                  key={value}
-                  mr={4}
-                  borderRadius={5}
-                  fontSize="2xl"
-                  cursor="pointer"
-                  onClick={() => onNumberClicked(value)}
-                >
-                  {value}
-                </Flex>
-              ))}
-              ;
-            </Flex>
-            <Box
-              h="150px"
-              w="150px"
-              onClick={genrateRandomNum}
-              cursor="pointer"
-            >
-              <Image src={require(`../images/dice${dice}.png`)} />
-            </Box>
-            <Text fontSize="lg">Click on dice to roll</Text>
-            <Text fontSize="6xl" color={score > 0 ? "green" : "red"}>
-              {score}
-            </Text>
-            <Heading as="h2" fontSize="6xl">
-              Total Score
-            </Heading>
-            <Button onClick={() => setScore(0)}>Reset Score</Button>
-          </Stack>
-          <Stack maxW="900px" mx="auto">
-            <Heading>Game Rules:-</Heading>
-            <List>
-              <ListItem>Select Number any number</ListItem>
-              <ListItem>Click on dice image to roll it</ListItem>
-              <ListItem>
-                Select number is equal to obtained dice result then you will get
-                same point of dice
-              </ListItem>
-              <ListItem>
-                if You are Wrong Score will be deducted by 2 points
-              </ListItem>
-            </List>
-          </Stack>
+              <Heading
+                as="h1"
+                fontSize={{ base: "xl", sm: "xl", md: "6xl", lg: "6xl" }}
+                color={error ? "red" : "black"}
+              >
+                {error ? error : "Select Number"}
+              </Heading>
+              <Button
+                onClick={() => {
+                  setGameStarted(false);
+                }}
+                alignSelf="flex-end"
+                bg="black"
+                color="white"
+                _hover={{ bg: "gray" }}
+              >
+                Back Game
+              </Button>
+              <Flex>
+                {numbers.map((value) => (
+                  <Flex
+                    justify="center"
+                    align="center"
+                    bg={selectedNumbers === value ? "green" : "black"}
+                    color="white"
+                    w="50px"
+                    h="50px"
+                    key={value}
+                    mr={4}
+                    borderRadius={5}
+                    fontSize="2xl"
+                    cursor="pointer"
+                    onClick={() => onNumberClicked(value)}
+                  >
+                    {value}
+                  </Flex>
+                ))}
+                ;
+              </Flex>
+              <Box
+                h={{base:'100px', sm:'100px', md:'150px', lg:'150px'}}
+                w={{base:'100px', sm:'100px', md:'150px', lg:'150px'}}
+                onClick={genrateRandomNum}
+                cursor="pointer"
+              >
+                <Image src={require(`../images/dice${dice}.png`)} />
+              </Box>
+              <Text fontSize="lg">Click on dice to roll</Text>
+              <Text fontSize="6xl" color={score > 0 ? "green" : "red"}>
+                {score}
+              </Text>
+              <Heading as="h2" fontSize="6xl">
+                Total Score
+              </Heading>
+              <Button onClick={() => setScore(0)}>Reset Score</Button>
+            </Stack>
+            <Stack maxW="900px" mx="auto" py={5}>
+              <Heading>Game Rules:-</Heading>
+              <List>
+                <ListItem>Select Number any number</ListItem>
+                <ListItem>Click on dice image to roll it</ListItem>
+                <ListItem>
+                  Select number is equal to obtained dice result then you will
+                  get same point of dice
+                </ListItem>
+                <ListItem>
+                  if You are Wrong Score will be deducted by 2 points
+                </ListItem>
+              </List>
+            </Stack>
           </Container>
         </>
       ) : (
-        <Container maxW='container.xl' py={20} >
-        <Flex justify="center" align="center">
-          <Image src={diceImage} w="50%" />
-          <Stack>
-            <Heading fontSize={{base:'3xl', sm:'3xl', md:'6xl', lg:'6xl'}}>The Dice Game</Heading>
-            <Button
-              bg="black"
-              alignSelf="flex-end"
-              color="white"
-              _hover={{ bg: "gray" }}
-              onClick={() => {
-                setGameStarted(true);
-              }}
-            >
-              Start Game
-            </Button>
-          </Stack>
-        </Flex>
+        <Container maxW="container.xl" py={10}>
+          <Flex justify="center" align="center">
+            <Image src={diceImage} w="50%" />
+            <Stack>
+              <Heading
+                fontSize={{ base: "3xl", sm: "3xl", md: "6xl", lg: "6xl" }}
+              >
+                The Dice Game
+              </Heading>
+              <Button
+                bg="black"
+                alignSelf="flex-end"
+                color="white"
+                _hover={{ bg: "gray" }}
+                onClick={() => {
+                  setGameStarted(true);
+                }}
+              >
+                Start Game
+              </Button>
+            </Stack>
+          </Flex>
         </Container>
       )}
     </>
