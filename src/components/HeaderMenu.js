@@ -12,7 +12,7 @@ import Profile from './Profile';
 const HeaderMenu = () => {
   return (
     <>
-    <Router>
+    <Router basename='/react-website'>
     <NavBar />
       <Routes>
         <Route path="/" index element={<Home />}></Route>
