@@ -3,6 +3,7 @@ import workImage1 from "../images/work-1.png";
 import workImage2 from "../images/work-2.png";
 import workImage3 from "../images/work-3.png";
 import { PhoneIcon } from "@chakra-ui/icons";
+import downloadResume from '../Resume-2023.docx';
 import {
   Button,
   Card,
@@ -19,6 +20,7 @@ import {
   Text,
   ListItem,
   UnorderedList,
+  Spacer,
 } from "@chakra-ui/react";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
@@ -193,10 +195,20 @@ const Profile = () => {
         >
           <GridItem>
             <Heading>Contact Me</Heading>
-            <Text>sundersamota001@gmail.com</Text>
+            <Spacer />
+            <Text py={4}>sundersamota001@gmail.com</Text>
             <Text>91-9694753020</Text>
-            <Text>70/57, Patel marg, Mansrover, Jaipur</Text>
-            <Button colorScheme="orange">Download CV</Button>
+            <Text py={4}>70/57, Patel marg, Mansrover, Jaipur</Text>
+            <Button colorScheme="orange">
+              <a
+                download
+                target="_blank"
+                rel="noreferrer"
+                href={downloadResume}
+              >
+                Download CV
+              </a>
+            </Button>
           </GridItem>
           <GridItem>
             <InputGroup>
