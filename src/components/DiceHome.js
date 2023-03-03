@@ -106,21 +106,21 @@ const DiceHome = () => {
               <Text fontSize="6xl" color={score > 0 ? "green" : "red"}>
                 {score}
               </Text>
-              <Heading as="h2" fontSize="6xl">
+              <Heading as="h2" fontSize={{base:'4xl', sm:'4xl', md:'6xl', ld:'6xl'}}>
                 Total Score
               </Heading>
               <Button onClick={() => setScore(0)}>Reset Score</Button>
             </Stack>
-            <Stack maxW="900px" mx="auto" py={5}>
+            <Stack maxW={{base:'container.xl', sm:'container.xl', md:'900px', lg:'900px'}} mx="auto" py={5}>
               <Heading>Game Rules:-</Heading>
               <List>
-                <ListItem>Select Number any number</ListItem>
-                <ListItem>Click on dice image to roll it</ListItem>
-                <ListItem>
+                <ListItem>1. Select Number any number</ListItem>
+                <ListItem>2. Click on dice image to roll it</ListItem>
+                <ListItem>3. 
                   Select number is equal to obtained dice result then you will
                   get same point of dice
                 </ListItem>
-                <ListItem>
+                <ListItem>4. 
                   if You are Wrong Score will be deducted by 2 points
                 </ListItem>
               </List>
