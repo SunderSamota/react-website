@@ -9,6 +9,7 @@ import {
   ListItem,
   Stack,
   Text,
+  SimpleGrid 
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import diceImage from "../images/dices.png";
@@ -91,17 +92,16 @@ const DiceHome = () => {
                 ))}
                 ;
               </Flex>
+              <SimpleGrid columns={2} spacing={10}>
               <Box
                 h={{ base: "35px", sm: "35px", md: "150px", lg: "150px" }}
                 w={{ base: "100px", sm: "100px", md: "150px", lg: "150px" }}
                 onClick={genrateRandomNum}
                 cursor="pointer"
               >
-                <Image
-                  pt={4}
-                  src={require(`../images/dice${dice}.png`)}
-                />
+                <Image src={require(`../images/dice${dice}.png`)} />
               </Box>
+              </SimpleGrid>
               <Text fontSize="lg">Click on dice to roll</Text>
               <Text fontSize="6xl" color={score > 0 ? "green" : "red"}>
                 {score}
