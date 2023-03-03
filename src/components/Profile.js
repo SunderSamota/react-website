@@ -37,7 +37,7 @@ const Profile = () => {
         >
           <GridItem w="100%">
             <Text fontSize="xl" color="green">
-              Full Stack Developer
+              Full Stack Developer / Fronted end developer
             </Text>
             <Heading as="h2" color="orange.700">
               Hi, I'm Sunder Samota From India
