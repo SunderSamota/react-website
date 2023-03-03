@@ -2,8 +2,7 @@ import userProfileImage from "../images/sunder.jpg";
 import workImage1 from "../images/work-1.png";
 import workImage2 from "../images/work-2.png";
 import workImage3 from "../images/work-3.png";
-import { PhoneIcon } from "@chakra-ui/icons";
-import downloadResume from '../Resume-2023.docx';
+import downloadResume from "../Resume-2023.docx";
 import {
   Button,
   Card,
@@ -14,13 +13,14 @@ import {
   HStack,
   Image,
   Input,
-  InputGroup,
-  InputLeftElement,
   Stack,
   Text,
   ListItem,
   UnorderedList,
   Spacer,
+  FormControl,
+  FormLabel,
+  Textarea,
 } from "@chakra-ui/react";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
@@ -211,27 +211,23 @@ const Profile = () => {
             </Button>
           </GridItem>
           <GridItem>
-            <InputGroup>
-              <InputLeftElement
-                pointerEvents="none"
-                children={<PhoneIcon color="gray.300" />}
-              />
-              <Input type="tel" placeholder="Phone number" />
-            </InputGroup>
-            <InputGroup>
-              <InputLeftElement
-                pointerEvents="none"
-                children={<PhoneIcon color="gray.300" />}
-              />
-              <Input type="tel" placeholder="Phone number" />
-            </InputGroup>
-            <InputGroup>
-              <InputLeftElement
-                pointerEvents="none"
-                children={<PhoneIcon color="gray.300" />}
-              />
-              <Input type="tel" placeholder="Phone number" />
-            </InputGroup>
+            <FormControl isRequired>
+              <FormLabel>Name</FormLabel>
+              <Input type="text" placeholder="Enter your full name" />
+            </FormControl>
+            <FormControl isRequired>
+              <FormLabel>Email</FormLabel>
+              <Input type="email" placeholder="Enter your email address.." />
+            </FormControl>
+            <FormControl isRequired>
+              <FormLabel>Message</FormLabel>
+              <Textarea placeholder="Please enter Message" />
+            </FormControl>
+            <FormControl>
+              <Button mt={4} colorScheme="teal" type="submit" justifiy='center' align='center'>
+                Submit
+              </Button>
+            </FormControl>
           </GridItem>
         </Grid>
       </Container>
